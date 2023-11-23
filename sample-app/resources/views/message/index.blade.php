@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
+    <form action="/messages" method="post">
+        @csrf
+        <input type="text" name="body">
+        <input type="submit" value="投稿">
+    </form>
     @foreach ($messages as $message)
         <div>{{ $message->body }}</div>
     @endforeach
